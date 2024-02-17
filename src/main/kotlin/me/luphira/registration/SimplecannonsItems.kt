@@ -1,4 +1,4 @@
-package me.luphira.items
+package me.luphira.registration
 
 import me.luphira.Simplecannons
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings

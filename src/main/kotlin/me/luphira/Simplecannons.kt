@@ -1,7 +1,8 @@
 package me.luphira
 
-import me.luphira.blocks.SimplecannonsBlocks
-import me.luphira.items.SimplecannonsItems
+import me.luphira.registration.SimplecannonsBlockEntities
+import me.luphira.registration.SimplecannonsBlocks
+import me.luphira.registration.SimplecannonsItems
 import net.fabricmc.api.ModInitializer
 import org.slf4j.LoggerFactory
 
@@ -13,7 +14,8 @@ object Simplecannons : ModInitializer {
 		logger.info("Simple Cannons 1.18.2 Fabric now starting...")
 		// Registration
 		SimplecannonsItems().registerItems()
-		SimplecannonsBlocks().registerBlocks()
+		SimplecannonsBlocks
+		SimplecannonsBlockEntities
 		logger.info("Simple Cannons registration finished.")
 	}
 }
