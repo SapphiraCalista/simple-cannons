@@ -1,5 +1,7 @@
 package me.luphira
 
+import me.luphira.blocks.SimplecannonsBlocks
+import me.luphira.items.SimplecannonsItems
 import net.fabricmc.api.ModInitializer
 import org.slf4j.LoggerFactory
 
@@ -7,9 +9,11 @@ object Simplecannons : ModInitializer {
     private val logger = LoggerFactory.getLogger("simplecannons")
 
 	override fun onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
-		logger.info("Hello Fabric world!")
+		// Some things (like resources) may still be uninitialized. Proceed with mild caution.
+		logger.info("Simple Cannons 1.18.2 Fabric now starting...")
+		// Registration
+		SimplecannonsItems().registerItems()
+		SimplecannonsBlocks().registerBlocks()
+		logger.info("Simple Cannons registration finished.")
 	}
 }
