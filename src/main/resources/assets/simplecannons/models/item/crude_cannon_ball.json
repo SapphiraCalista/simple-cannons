@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "simplecannons:item/crude_cannon_ball"
+  }
+}

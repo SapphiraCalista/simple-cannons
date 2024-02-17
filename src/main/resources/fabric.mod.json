@@ -2,8 +2,8 @@
 	"schemaVersion": 1,
 	"id": "simplecannons",
 	"version": "${version}",
-	"name": "simplecannons",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Simple Cannons",
+	"description": "Simple Cannons brings you the opposite of Create Big Cannons!",
 	"authors": [
 		"Illuc",
 		"Sapphira"

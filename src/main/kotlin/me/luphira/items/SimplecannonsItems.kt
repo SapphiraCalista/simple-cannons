@@ -1,18 +1,24 @@
 package me.luphira.items
 
+import me.luphira.Simplecannons
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings
 import net.minecraft.item.Item
+import net.minecraft.item.ItemGroup
 import net.minecraft.util.Identifier
 import net.minecraft.util.registry.Registry
-import org.slf4j.LoggerFactory
-
 
 class SimplecannonsItems {
-    private val CUSTOM_ITEM: Item = Item(FabricItemSettings()) // Provides settings like durability apparently
+    // Function to make registering look a lot nicer
+    private fun register(name: String, settings: Item) {
+        Registry.register(Registry.ITEM, Identifier(Simplecannons.modid, name), settings)
+    }
+
     fun registerItems() {
-        val logger = LoggerFactory.getLogger("simplecannons")
-        logger.info("Simple Cannons will now begin initialising items.")
-        // To do: Create a function to register items to prevent horrors later.
-        Registry.register<Item, Item>(Registry.ITEM, Identifier("simplecannons", "crude_cannon_ball"), CUSTOM_ITEM) // IntelliJ auto converted this, don't ask me what <Item, Item> means
+        Simplecannons.logger.info("Simple Cannons will now begin initialising items.")
+        register("crude_cannon_ball", Item(FabricItemSettings().group(ItemGroup.COMBAT)))
+        register("item_two", Item(FabricItemSettings()))
+        register("item_three", Item(FabricItemSettings()))
+
+
     }
 }
